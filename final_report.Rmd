@@ -1,0 +1,31 @@
+---
+title: 'Parks and Protected Areas GA Analysis'
+author: "Bailey Hebermehl"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+# Introduction
+In an attempt to positively influence human health, the Parks and Protected Areas Database of the United States identifies parks that are accessible for outdoor recreation. The padus_ar_cov_trct raw data is a long dataset containing 4 variables and 72539 observations. The variables include geographic units of GEOID, state FIP (STATEFP), and county FIP (COUNTYFP). The outcome variable is the percentage of accessible, recreational, protected park areas covering each geographic unit (pc_park). The objective of this analysis is to compare park percentage across the five metro counties of Atlanta: Cobb, Fulton, Gwinnett, DeKalb, and Clayton counties. 
+
+```{r input-data, echo=FALSE, include=FALSE}
+knitr::opts_chunk$set(tidy.opts=list(comment=FALSE))
+
+here::i_am("final_report.Rmd")
+data_metro <- readRDS("output/data_metro.rds")
+```
+
+## Table 1: Summary Statistics 
+Below is a table of summary statistics for pc_park by our metro counties of interest. The table includes the 1st quartile, median, and 3rd quartile values. The largest park percentage is Fulton County (2.4%), followed by DeKalb County (2.1%), Cobb County (1.1%), Clayton County (0.4%), and Gwinnett County (0.1%). 
+
+```{r, table-one, echo=FALSE }
+table1 <- readRDS("output/table1.rds")
+table1
+```
+## Figure 1: Park Percentage by Metro Counties
+Below is Figure 1 containing boxplots of park percentage by counties of interest. As supported by Table 1, Figure 1 shows Fulton County having the highest median of park percentage. 
+```{r figure-one, echo=FALSE}
+knitr::include_graphics(
+  here::here("output/boxplot.png")
+)
+```
