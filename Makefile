@@ -13,3 +13,6 @@ output/boxplot.png: code/03_make_figure.R output/data_metro.rds
 .PHONY: clean
 clean:
 	rm -f output/*
+	
+install:
+	Rscript -e "renv::restore(prompt = FALSE)"
