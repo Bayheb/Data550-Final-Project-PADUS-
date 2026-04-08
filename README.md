@@ -27,8 +27,19 @@ The final report includes:
   
   -  Figure 1: Park Percentage by Metro Counties
 
+## Reproducing the package environment
+Use 'renv' to manage R package versions required for this project. 
+To restore the package environment, run:
+```bash
+make install
+```
+
 ## Building the report
 From the repository directory, run:
 
 ```bash
 make
+```
+
+
+
