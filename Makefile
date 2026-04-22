@@ -30,5 +30,5 @@ mac_final_report/final_report.html:
   docker run -v "$$(pwd)/final_report":/project/final_report bayheb/padus_6
 
 windows_final_report/final_report.html: 
-  docker run -v /"$$(pwd)/final_report":/project/final_report bayhheb/padus_6
+  docker run -v /"$$(pwd)/final_report":/project/final_report bayheb/padus_6
 	
