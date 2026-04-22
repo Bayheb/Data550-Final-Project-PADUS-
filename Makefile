@@ -16,3 +16,14 @@ clean:
 	
 install:
 	Rscript -e "renv::restore(prompt = FALSE)"
+	
+project image:
+	 docker build -t padus_6 .
+	 touch $@
+	 
+mac_final_report/final_report.html: padus_6
+  docker run -v "$$(pwd)/final_report":/project/final_report padus_6
+
+windows_final_report/final_report.html: padus_6
+  docker run -v /"$$(pwd)/final_report":/project/final_report padus_6
+	
