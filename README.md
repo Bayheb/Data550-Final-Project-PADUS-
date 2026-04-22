@@ -44,7 +44,7 @@ make
 ## Building the report using docker
 The Makefile pulls the Docker image `bayheb/padus_6` from Docker Hub.
 
-run:
+From the terminal, run:
   ```bash 
   docker build bayheb/padus_6
   open final_report/final_report.html
