@@ -20,15 +20,15 @@ install:
 # Docker-associated rules
 	
 pull image:
-  docker pull bayheb/padus_6
+	docker pull bayheb/padus_6
 
 build image: 
-  docker build -t bayheb/padus_6 .
-  touch $@ 
+	docker build -t bayheb/padus_6 .
+	touch $@ 
 	
 mac_final_report/final_report.html: 
-  docker run -v "$$(pwd)/final_report":/project/final_report bayheb/padus_6
+	docker run -v "$$(pwd)/final_report":/home/rstudio/project/final_report bayheb/padus_6
 
 windows_final_report/final_report.html: 
-  docker run -v /"$$(pwd)/final_report":/project/final_report bayheb/padus_6
+	docker run -v /"$$(pwd)/final_report":/home/rstudio/project/final_report bayheb/padus_6
 	
