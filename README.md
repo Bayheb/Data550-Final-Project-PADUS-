@@ -49,11 +49,14 @@ Pull the image. From the terminal, run:
 docker pull bayheb/padus_6
 
 For Mac, from the terminal, run:
-  ```bash 
+```bash
   make mac_final_report/final_report.html
   ```
+  
 For Windows, from the terminal run:
+```bash
   make windows_final_report/final_report.html
+  ```
   
 
 
