@@ -43,6 +43,7 @@ make
 
 ## Building the report using docker
 The Makefile pulls the Docker image `bayheb/padus_6` from Docker Hub.
+The image can be found here: https://hub.docker.com/repository/docker/bayheb/padus_6/general
 
 Pull the image. From the terminal, run:
 docker pull bayheb/padus_6
